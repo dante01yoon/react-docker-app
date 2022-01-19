@@ -20,6 +20,6 @@ after_success:
 
   - docker push dante01yoon/docker-frontend
   - docker push dante01yoon/docker-backend
-  - docker push dante01yoon/nginx
+  - docker push dante01yoon/docker-nginx
   
   
