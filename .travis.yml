@@ -21,5 +21,21 @@ after_success:
   - docker push dante01yoon/docker-frontend
   - docker push dante01yoon/docker-backend
   - docker push dante01yoon/docker-nginx
+
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-northeast-2"
+  app: "docker-fullstack-app"
+  env: "DockerFullstackApp-env"
+  bucket_name: ""
+  bucket_path: ""
+  on:
+    branch: master
+
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
   
+
+
+
   
